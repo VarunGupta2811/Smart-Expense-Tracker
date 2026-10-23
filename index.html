@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Smart Expense Splitter</h1>
+            <p>Share expenses fairly with your friends.</p>
+        </header>
+
+        <section class="card">
+            <h2>Add a Friend</h2>
+            <div class="input-row">
+                <input type="text" id="friendName"
+                       placeholder="Enter friend's name">
+                <button id="addFriendBtn">Add Friend</button>
+            </div>
+            <p id="friendMessage" class="message"></p>
+            <ul id="friendList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Add an Expense</h2>
+
+            <label for="expenseDescription">Description</label>
+            <input type="text" id="expenseDescription"
+                   placeholder="e.g. Dinner">
+
+            <label for="expenseAmount">Amount (₹)</label>
+            <input type="number" id="expenseAmount"
+                   placeholder="Enter amount">
+
+            <label for="payer">Paid by</label>
+            <select id="payer">
+                <option value="">Select a friend</option>
+            </select>
+
+            <button id="addExpenseBtn" class="full-width">
+                Add Expense
+            </button>
+            <p id="expenseMessage" class="message"></p>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <p>Total Expenses</p>
+                <h2 id="totalExpenses">₹0.00</h2>
+            </div>
+            <div class="summary-card">
+                <p>Number of Friends</p>
+                <h2 id="totalFriends">0</h2>
+            </div>
+            <div class="summary-card">
+                <p>Equal Share</p>
+                <h2 id="equalShare">₹0.00</h2>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Expense History</h2>
+            <ul id="expenseList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Individual Balances</h2>
+            <div id="balanceList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
